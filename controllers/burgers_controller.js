@@ -11,8 +11,19 @@ router.get('/', function(req, res){
         console.log(hbsObject); 
         res.render("index", hbsObject); 
     })
-// console.log('hi')
-})
+
+});
+
+// render.post("/api/burgers", function(req, res){
+//     burger.create([
+//         "name", "devoured"
+//     ], [
+//         req.body.name, req.body.devoured
+//     ], function(result){
+//         // Send back the id of a new flavor
+//         res.json({id: result.insertId});
+//     });
+// });
 
 module.exports = router; 
 

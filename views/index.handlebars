@@ -19,19 +19,19 @@
         <div class="large-12 cell">
           <div class="callout">
            
-            <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+            <h3>Welcome! </h3>
             <div class="grid-x grid-padding-x">
               <div class="large-4 medium-4 cell">
                  <img style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
               </div>
               
               <div class="large-8 cell">
-                  Try the icecream 
+                  ice cream 
                   <hr>
                   <div class="grid-x grid-padding-x">
 
                     <div class="large-6 medium-6 cell">
-                       <a href="#" class="success button">Menu</a><br/>
+                       <a href="#" class="success button">Flavors</a><br/>
                     </div>
 
                     <div class="large-6 medium-6 cell">
@@ -52,43 +52,52 @@
           <div class="callout" style="height: 72vh;">
 
             <h3>Check out our awesome flavors! </h3>
-            <div class="grid-x grid-padding-x" style="margin-top: 2vh">
-              
-              <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
+              <section class="filter-simple">
+                <div class="button-group">
+                  <button class="button hollow filter-simple-button is-active" style="max-width: 10vw; width: 100%" data-filter="all">All</button>
+                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%" data-filter="space">One</button>
+                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%" data-filter="nature">Two</button>
+                </div>
+
+            <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
+        
+              <div class="large-3 medium-3 small-6 cell filter-simple-item space" style="padding-top: 2vh">
                   <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
               </div>
-              <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
+              <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
                   <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
               </div>
-               <div class="large-3 medium-3 small-6  cell" style="padding-top: 2vh">
+               <div class="large-3 medium-3 small-6  cell filter-simple-item space" style="padding-top: 2vh">
                   <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
               </div>
-                <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
-              </div>
-            </div>
-            <div class="grid-x grid-padding-x" style="margin-top: 2vh">
-              
-              <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
-              </div>
-              <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
-              </div>
-               <div class="large-3 medium-3 small-6  cell" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
-              </div>
-                <div class="large-3 medium-3 small-6 cell" style="padding-top: 2vh">
+                <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
                   <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
               </div>
             </div>
+
+            <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
+              
+              <div class="large-3 medium-3 small-6 cell filter-simple-item space" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              </div>
+              <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              </div>
+               <div class="large-3 medium-3 small-6  cell filter-simple-item space" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              </div>
+                <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              </div>
+            </div>
+
+            </section>
             
           </div>
         </div>
       </div>
 
       <!-- Play -->
-        <div class="grid-x grid-padding-x">
       <div class="callout" style="height: 72vh; margin-bottom: 10vh">
         <div class="grid-x grid-padding-x" style="padding-top: 4vh">
           
@@ -102,52 +111,55 @@
           </div>
           <!-- Flavor options -->
           <div class="large-4 medium-4 cell">
-            <form>
+            {{!-- <form class="create-form"> --}}
               <!-- Selection Menu -->
               <div class="large-12 cell">
                 <h5>Menu</h5>
                   <select>
-                    <option value="" >Pick a flavor</option>
-                    <option value="husker">Strawberry</option>
-                    <option value="starbuck">Vanilla</option>
-                    <option value="hotdog">Chocolate</option>
-                    <option value="apollo">Coffee</option>
+                    <option value="" default>Pick a flavor</option>
+                    {{#each burgers}}
+                    
+                      {{#if devoured}}
+                       <option>
+                        {{> burgers/burger-block devoured=false}}
+                         </option>
+                      {{/if}}
+                     
+                    {{/each}}
+                    
                   </select>
               </div>
               <!-- Add a new flavor -->
               <div class="large-12 cell">
                 <h5>Add a new flavor</h5>
-                  <div class="input-group">
-                    <input type="text"class="input-group-field" placeholder="Select a menu item or create your flavor!" />
-                    <span class="input-group-label">add</span>
+                  <div class="form-group create-form">
+                   <input id="flavor" type="text" class="form-group-field" name="name" placeholder="Select a menu item or create your flavor!"/>
+                    <button class="form-group-label" data-toggle="motion-example-2" aria-controls="motion-example-2" type="submit">add</button>
                   </div>
               </div>
+              {{!-- <form action="">
+                <div class="input-group">
+                  <input class="input-group-field" type="text" placeholder="Add a new flavor">
+                  <div class="input-group-button">
+                    <input type="submit" class="button"data-toggle="motion-example-2" aria-controls="motion-example-2" value="">
+                  </div>
+                </div>
+              </form> --}}
               <!-- Feed Me -->
               <div class="large-12 cell">
-                <h5>FEED ME! </h5>
-                <div class="callout" >
-                  <div id="transitionList" class="callout" data-toggler data-animate="slide-in-up">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore praesentium sint alias dolorum qui vel quaerat, libero consequatur non esse asperiores veritatis commodi, odit eum ipsam nemo dicta iste aliquam.</p>
-                  </div>
-                  <button id="transitioner" data-toggle="transitionList" class="expanded button">Devour</button>
+                <h5>Flavors to try: </h5>
+                     <ul style="list-style-type:none; margin-left: 0">
+                       {{#each burgers}}
+                          {{#unless devoured}}
+                            {{> burgers/burger-block devoured=true}}
+                          {{/unless}}
+                        {{/each}}
+                     </ul>
+                  
                 </div>
-              </div>
-
-            </form>
           </div>
         </div>
       </div>
-      </div>
+  
             
     </div> <!-- End of main section -->
-
-    {{!-- <footer style="bottom: 0!important">
- 
-      <ul class="menu align-center sticky-shrinknav-menu" style="bottom: 0!important">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Play</a></li>
-      </ul>
-    </footer> --}}
-    
-    

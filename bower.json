@@ -1,0 +1,21 @@
+{
+  "name": "Burger",
+  "description": "project",
+  "main": "server.js",
+  "authors": [
+    "Jessie S. <jessie.sholler@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "(https://github.com/JAE-S/Burger)",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "^5.5.3"
+  }
+}

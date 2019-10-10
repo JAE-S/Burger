@@ -111,3 +111,66 @@ body.sticky-shrinknav-wrapper .sticky-shrinknav-header .sticky-shrinknav-header-
   margin-bottom: 30px;
 }
 
+.sticky-shrinknav-header {
+  background-color: rgb(15, 158, 163); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(15, 158, 163), rgb(22, 216, 223),rgb(15, 158, 163)); /* Standard syntax (must be last) */
+}
+
+.menu a, .menu .button, .bt-flavors-play, .filter-simple-button {
+  line-height: 1.5;
+  padding: 1rem 1rem;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 4px; 
+}
+
+h1, h3 {
+  font-family: guapa, sans-serif;
+  font-weight: 600;
+   font-style: normal;
+   letter-spacing: 4px; 
+}
+
+h3, h5 {
+ 
+  font-family: acumin-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 {
+  font-weight: 600;
+  letter-spacing: 4px; 
+  color: rgb(15, 158, 163);
+}
+
+.callout {
+  border: 4px double rgb(15, 158, 163)
+}
+
+.bt-flavors-play {
+  background-color: rgb(15, 158, 163); /* For browsers that do not support gradients */
+  font-weight: 600;
+  padding: .8vh;
+  line-height: 1.5; 
+}
+
+.intro-text {
+  border-bottom: 1px solid rgb(15, 158, 163);
+  padding-bottom: 2vh; 
+  letter-spacing: 1px;
+}
+
+p {
+  line-height: 1.2;
+  margin-bottom:  .6rem;
+}
+
+.filter-simple-button {
+  border-radius: none; 
+}
+
+.filter-simple .filter-simple-button.hollow.is-active, .filter-simple .filter-simple-button.hollow:focus, .filter-simple .filter-simple-button.hollow:active {
+  background-color: rgb(15, 158, 163);
+}

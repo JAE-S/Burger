@@ -12,29 +12,29 @@ function printQuestionMarks(num){
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
-// function objToSql(obj) {
-//     var arr = []; 
+function objToSql(ob) {
+    var arr = []; 
 
-//     // Loops through the keys and pushes the key/values as a string into an arr 
-//     for (var key in obj){
-//         var value = obj[key];
-//         // Checks to skip hidden properties
-//         if (Object.hasOwnProperty.call(obj, key)){
-//             // If string with spaces, and quotations ( ex. {name: burger 1}) => ["name='burger 1'"]
-//             if(typeof value === "string" && value.indexOf(" ") >= 0){
-//                 value = "'" + value + "'";
-//             }
-//             arr.push(key + "=" + value); 
-//         }
-//     }
-//     // Translates array of strings to a single coma-separated string 
-//     return arr.toString();
-// }
+    // Loops through the keys and pushes the key/values as a string into an arr 
+    for (var key in ob){
+        var value = ob[key];
+        // Checks to skip hidden properties
+        if (Object.hasOwnProperty.call(ob, key)){
+            // If string with spaces, and quotations ( ex. {name: burger 1}) => ["name='burger 1'"]
+            if(typeof value === "string" && value.indexOf(" ") >= 0){
+                value = "'" + value + "'";
+            }
+            arr.push(key + "=" + value); 
+        }
+    }
+    // Translates array of strings to a single coma-separated string 
+    return arr.toString();
+}
 
 // // Object for all SQL statement functions
 var orm = {
 
-    all: function(tableInput, cb){
+    all: function(tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result){
             if (err) {
@@ -43,25 +43,41 @@ var orm = {
             cb(result);
         });
     },
-    create: function(table, cols, vals, cb){
+    create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO" + table; 
 
         queryString += " ("; 
         queryString += cols.toString();
         queryString += ") ";
-        queryString += "VALUES (";
+        queryString += "VALUES ("; 
         queryString += printQuestionMarks(vals.length);
         queryString += ")";
 
         console.log(queryString); 
 
-        connection.query(queryString, vals, function(err, result){
+        connection.query(queryString, vals, function(err, result) {
             if (err) {
                 throw err; 
             }
             cb(result); 
         });
     },
+    update: (table, objColVals, condition, cb) => {
+        var queryString = "UPDATE " + table; 
+
+        queryString += " SET "; 
+        queryString += objToSql(objColVals);
+        queryString += " WHERE "; 
+        queryString += condition; 
+
+        console.log(queryString);
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err; 
+            }
+            cb(result); 
+        })
+    }
 
 }
 

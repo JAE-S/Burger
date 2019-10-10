@@ -1,9 +1,13 @@
-var express = require("express")
+var express = require("express");
 var router = express.Router(); 
 
 var burger = require("../models/burger.js");
 
-router.get('/', function(req, res){
+router.get("/", function(req,res){
+	res.redirect("burgers")
+});
+
+router.get('/burgers', function(req, res){
     burger.all(function(data){
         var hbsObject = {
             burgers: data
@@ -14,16 +18,39 @@ router.get('/', function(req, res){
 
 });
 
-// render.post("/api/burgers", function(req, res){
-//     burger.create([
-//         "name", "devoured"
-//     ], [
-//         req.body.name, req.body.devoured
-//     ], function(result){
-//         // Send back the id of a new flavor
-//         res.json({id: result.insertId});
-//     });
-// });
+//POST route to create/add a burger.
+router.post("/api/burgers", function(req, res) {
+    burger.create([
+      "name", "devoured"
+    ], [
+      req.body.burger_name, req.body.devoured
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
+
+//PUT route to update burger devoured state.
+router.put("/api/burgers/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+  
+    console.log("condition", condition);
+  
+    burger.update({
+      devoured: req.body.devoured
+    }, condition, function(result) {
+      if (result.changedRows == 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    });
+
+
+
+  });
+
 
 module.exports = router; 
 

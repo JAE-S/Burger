@@ -1,12 +1,13 @@
     
     <!-- Header -->
     <header class="sticky-shrinknav-header">
-
-      <h1 class="sticky-shrinknav-header-title">Title Here!</h1>
+      <h1 class="sticky-shrinknav-header-title" style="width=100%; z-index: 1; position:absolute; padding-top: 6vh">Ice Cream Taster</h1>
+      <img class="sticky-shrinknav-header-title" style="width=100%; z-index: 0; transform: scaleY(-1);" src="/static-files/assets/images/backgrounds/sprinkles_long.png">
+      
       <ul class="menu align-center sticky-shrinknav-menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Play</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">PLAY</a></li>
       </ul>
 
     </header>
@@ -15,27 +16,34 @@
     <div class="main-container grid-container" style="margin-bottom: 4vh">
      
       <!-- About -->
-      <div class="grid-x grid-padding-x" style="margin-top: 10vh; margin-bottom: 10vh">
+      <div class="grid-x grid-padding-x" style="margin-top: 8vh; margin-bottom: 30vh">
         <div class="large-12 cell">
-          <div class="callout">
+          <div class="callout" style="height: 55vh">
            
-            <h3>Welcome! </h3>
+            <h3 class="text-center">Welcome to Ice Cream Taster!</h3>
             <div class="grid-x grid-padding-x">
               <div class="large-4 medium-4 cell">
-                 <img style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+                 <img style="margin: 0 auto; display: block;box-shadow: 10px 10px 5px -5px rgba(182,177,184,1);" src="/static-files/assets/images/backgrounds/ice_cream_1.png">   
               </div>
               
-              <div class="large-8 cell">
-                  ice cream 
-                  <hr>
-                  <div class="grid-x grid-padding-x">
+              <div class="large-8 cell align-self-middle">
+                  <h5 class="intro-text">Ice Cream Taster is data management application that uses MySQL, Node, Express, Handlebars, and a homemade ORM that is deployed through Heroku!</h5> 
+                  <h3 class="text-center">How it works: </h3>
+                  <ul>
+                    <li><p>Ice Cream Taster lets users input or select flavors they'd like to try</p></li>
+                    <li><p>Whenever a user submits a flavor, the app will display the new flavor -- waiting to be devoured</p></li>
+                    <li><p>Each flavor in the waiting area also has a Devour it! button</p></li>
+                    <li><p>When the user devours a flavor, the flavor will move back to the menu selection</p></li>
+                    <li><p>The app stores every flavor in a database, whether devoured or not</p></li>
+                  </ul>
+                  <div class="grid-x grid-padding-x text-center">
 
                     <div class="large-6 medium-6 cell">
-                       <a href="#" class="success button">Flavors</a><br/>
+                       <a href="#" class="bt-flavors-play button expanded">FLAVORS</a><br/>
                     </div>
 
                     <div class="large-6 medium-6 cell">
-                      <a href="#" class="success button">Play</a><br/>
+                      <a href="#" class="bt-flavors-play button expanded">PLAY</a><br/>
                     </div>
 
                   </div>
@@ -49,47 +57,49 @@
       <!-- Menu -->
       <div class="grid-x grid-padding-x" style="margin-top: 10vh; margin-bottom: 10vh">
         <div class="large-12 cell">
-          <div class="callout" style="height: 72vh;">
+          <div class="callout text-center" style="height: 74.5vh;">
 
-            <h3>Check out our awesome flavors! </h3>
+            <h3>Check Out Our Awesome Flavors! </h3>
               <section class="filter-simple">
                 <div class="button-group">
-                  <button class="button hollow filter-simple-button is-active" style="max-width: 10vw; width: 100%" data-filter="all">All</button>
-                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%" data-filter="space">One</button>
-                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%" data-filter="nature">Two</button>
+                  <button class="button hollow filter-simple-button is-active" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="all">ALL</button>
+                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="classic">CLASSIC</button>
+                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="nutty">NUTTY</button>
+                    <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="fruity">FRUITY</button>
                 </div>
 
-            <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
+            <div class="grid-x grid-padding-x row small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
         
-              <div class="large-3 medium-3 small-6 cell filter-simple-item space" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              <div class="large-3 medium-3 small-6 cell filter-simple-item classic" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_cookie.png">   
               </div>
-              <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              <div class="large-3 medium-3 small-6 cell filter-simple-item classic" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_mint.png">   
               </div>
-               <div class="large-3 medium-3 small-6  cell filter-simple-item space" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+               <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_blueberry.png">   
               </div>
-                <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+               <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_chocolate_almond.png">   
               </div>
-            </div>
+            {{!-- </div>
 
-            <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
-              
-              <div class="large-3 medium-3 small-6 cell filter-simple-item space" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+             <div class="grid-x grid-padding-x row small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh"> --}}
+        
+              <div class="large-3 medium-3 small-6 cell filter-simple-item fruity" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_strawberry.png">   
               </div>
-              <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_hazelnut.png">   
               </div>
-               <div class="large-3 medium-3 small-6  cell filter-simple-item space" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+               <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_raspberry_swirls.png">   
               </div>
-                <div class="large-3 medium-3 small-6 cell filter-simple-item nature" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540">   
+              <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
+                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_vanilla_almond.png">   
               </div>
             </div>
+            
 
             </section>
             
@@ -105,7 +115,7 @@
             <!-- INSERT IMAGE -->
             <div class="grid-x grid-padding-x">
               <div class="large-12 cell">
-                    <img style="margin: 0 auto; display: block"src="http://via.placeholder.com/540x540"> 
+                    <img style="margin: 0 auto; display: block;" src="/static-files/assets/images/backgrounds/favorite_flavor_image.png"> 
                 </div>
             </div>
           </div>
@@ -115,28 +125,40 @@
               <!-- Selection Menu -->
               <div class="large-12 cell">
                 <h5>Menu</h5>
+                <!--Div to hold burgers that have not been devoured yet-->
+                <form>
                   <select>
                     <option value="" default>Pick a flavor</option>
                     {{#each burgers}}
-                    
                       {{#if devoured}}
-                       <option>
-                        {{> burgers/burger-block devoured=false}}
-                         </option>
+                        <option>
+                          {{> burgers/burger-block devoured=false}}
+                        </option>
                       {{/if}}
-                     
                     {{/each}}
-                    
                   </select>
+                </form>
               </div>
               <!-- Add a new flavor -->
-              <div class="large-12 cell">
+              <form method="POST" role="form">
+                <fieldset style="border: 1px solid #DDDDDD; padding: 0 1.11111rem; margin-bottom: 2vh">
+                  <legend style="margin-left: -0.16667rem; padding: 0 0.16667rem; color: rgb(15, 158, 163);"><h5>Add a Custom Flavor</h5></legend>
+                    <div class="row" style="display: flex">
+                      <input type="text" id="flavor" style="color: rgb(231, 53, 163)" placeholder="Add a custom flavor">
+                        <div class="small-2 columns">
+                          <a style="font-weight: bold; color: rgb(231, 53, 163)" class="button clear postfix" id="addFlavor" type="submit">ADD</a>
+                      </div>
+                    </div>
+                </fieldset>
+              </form>
+
+              {{!-- <div class="create-form large-12 cell">
                 <h5>Add a new flavor</h5>
-                  <div class="form-group create-form">
+                  <div class="form-group">
                    <input id="flavor" type="text" class="form-group-field" name="name" placeholder="Select a menu item or create your flavor!"/>
                     <button class="form-group-label" data-toggle="motion-example-2" aria-controls="motion-example-2" type="submit">add</button>
                   </div>
-              </div>
+              </div> --}}
               {{!-- <form action="">
                 <div class="input-group">
                   <input class="input-group-field" type="text" placeholder="Add a new flavor">
@@ -147,7 +169,7 @@
               </form> --}}
               <!-- Feed Me -->
               <div class="large-12 cell">
-                <h5>Flavors to try: </h5>
+                <h5 class="text-center" style="border-top: 1px solid rgb(15, 158, 163); border-bottom: 1px solid rgb(15, 158, 163); color: rgb(15, 158, 163); padding: 1vh; margin-bottom: 2vh;">Flavors to try: </h5>
                      <ul style="list-style-type:none; margin-left: 0">
                        {{#each burgers}}
                           {{#unless devoured}}
@@ -163,3 +185,4 @@
   
             
     </div> <!-- End of main section -->
+

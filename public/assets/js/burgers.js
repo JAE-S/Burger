@@ -22,7 +22,9 @@ $(function() {
           type: "POST", 
           data: newBurger
         }).then( 
+          
             function() {
+              
                 console.log("New flavor added successfully")
                 // Reload the page to get the updated list 
                 location.reload();

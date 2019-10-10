@@ -27,6 +27,4 @@ $('.filter-simple-button').click(function () {
   $(this).addClass('is-active');
 });
 
-
-
 });

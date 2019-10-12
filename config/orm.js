@@ -49,7 +49,7 @@ var orm = {
         queryString += " ("; 
         queryString += cols.toString();
         queryString += ") ";
-        queryString += "VALUES ("; 
+        queryString += " VALUES ("; 
         queryString += printQuestionMarks(vals.length);
         queryString += ")";
 
@@ -63,7 +63,7 @@ var orm = {
         });
     },
     update: (table, objColVals, condition, cb) => {
-        var queryString = "UPDATE " + table; 
+        var queryString = " UPDATE " + table; 
 
         queryString += " SET "; 
         queryString += objToSql(objColVals);

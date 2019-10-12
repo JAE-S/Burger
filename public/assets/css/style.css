@@ -1,9 +1,10 @@
 
+/* 
 body {
   padding-top: 330px;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .sticky-shrinknav-menu {
   position: absolute;
@@ -173,4 +174,32 @@ p {
 
 .filter-simple .filter-simple-button.hollow.is-active, .filter-simple .filter-simple-button.hollow:focus, .filter-simple .filter-simple-button.hollow:active {
   background-color: rgb(15, 158, 163);
+}
+
+section {
+  width: 100%;
+  /* padding: 0 7%; */
+  display: table;
+  /* margin: 0; */
+  max-width: none;
+  /* background-color: #373B44; */
+  height: 100vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.introContent {
+  margin-top: 36vh;
+}
+
+.is-dropdown-submenu {
+max-width: 270px; 
+width: 100%;
+  max-height: 40vh; 
+  overflow-x: hidden; 
+  padding: 5px;
+  overflow-y: scroll;
 }

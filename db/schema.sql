@@ -1,8 +1,8 @@
 -- BURGER SCHEMA -- 
-CREATE DATABASE burger_db; 
-USE burger_db; 
+CREATE DATABASE icecream_db; 
+USE icecream_db; 
 
-CREATE TABLE burgers
+CREATE TABLE icecreams
 (
     id int NOT NULL AUTO_INCREMENT, 
     name varchar(80) NOT NULL, 

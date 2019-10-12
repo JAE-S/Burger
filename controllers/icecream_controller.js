@@ -1,16 +1,16 @@
 var express = require("express");
 var router = express.Router(); 
 
-var burger = require("../models/burger.js");
+var icecream = require("../models/icecream.js");
 
 router.get("/", function(req,res){
-	res.redirect("burgers")
+	res.redirect("icecream")
 });
 
-router.get('/burgers', function(req, res){
-    burger.all(function(data){
+router.get('/icecream', function(req, res){
+    icecream.all(function(data){
         var hbsObject = {
-            burgers: data
+            icecreams: data
         }; 
         console.log(hbsObject); 
         res.render("index", hbsObject); 
@@ -18,10 +18,10 @@ router.get('/burgers', function(req, res){
 
 });
 
-//POST route to create/add a burger.
-router.post("/api/burgers", function(req, res) {
+//POST route to create/add a icecreams.
+router.post("/api/icecream", function(req, res) {
   console.log(req.body.name)
-    burger.create([
+    icecream.create([
       "name", "devoured"
     ], [
       req.body.name, req.body.devoured
@@ -31,13 +31,13 @@ router.post("/api/burgers", function(req, res) {
     });
   });
 
-//PUT route to update burger devoured state.
-router.put("/api/burgers/:id", function(req, res) {
+//PUT route to update icecreams devoured state.
+router.put("/api/icecream/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
   
-    burger.update({
+    icecream.update({
       devoured: req.body.devoured
     }, condition, function(result) {
       if (result.changedRows == 0) {

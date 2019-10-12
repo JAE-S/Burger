@@ -1,188 +1,201 @@
     
-    <!-- Header -->
-    <header class="sticky-shrinknav-header">
-      <h1 class="sticky-shrinknav-header-title" style="width=100%; z-index: 1; position:absolute; padding-top: 6vh">Ice Cream Taster</h1>
-      <img class="sticky-shrinknav-header-title" style="width=100%; z-index: 0; transform: scaleY(-1);" src="/static-files/assets/images/backgrounds/sprinkles_long.png">
-      
-      <ul class="menu align-center sticky-shrinknav-menu">
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">MENU</a></li>
-        <li><a href="#">PLAY</a></li>
-      </ul>
+<!-- Header -->
+<header class="sticky-shrinknav-header">
+  <h1 class="sticky-shrinknav-header-title" style="width=100%; z-index: 1; position:absolute; padding-top: 6vh">Ice Cream Taster</h1>
+  <img class="sticky-shrinknav-header-title" style="width=100%; z-index: 0; transform: scaleY(-1);" src="/static-files/assets/images/backgrounds/sprinkles_long.png">
+  
+  <ul class="menu align-center sticky-shrinknav-menu" data-magellan data-options="animationEasing: linear; animationDuration: 3000;">
+    <li><a href="#intro">ABOUT</a></li>
+    <li><a href="#menu">MENU</a></li>
+    <li><a href="#play">PLAY</a></li>
+  </ul>
 
-    </header>
+</header>
     
-     <!-- Main Container -->
-    <div class="main-container grid-container" style="margin-bottom: 4vh">
-     
-      <!-- About -->
-      <div class="grid-x grid-padding-x" style="margin-top: 8vh; margin-bottom: 30vh">
-        <div class="large-12 cell">
-          <div class="callout" style="height: 55vh">
-           
-            <h3 class="text-center">Welcome to Ice Cream Taster!</h3>
-            <div class="grid-x grid-padding-x">
-              <div class="large-4 medium-4 cell">
-                 <img style="margin: 0 auto; display: block;box-shadow: 10px 10px 5px -5px rgba(182,177,184,1);" src="/static-files/assets/images/backgrounds/ice_cream_1.png">   
-              </div>
-              
-              <div class="large-8 cell align-self-middle">
-                  <h5 class="intro-text">Ice Cream Taster is data management application that uses MySQL, Node, Express, Handlebars, and a homemade ORM that is deployed through Heroku!</h5> 
-                  <h3 class="text-center">How it works: </h3>
-                  <ul>
-                    <li><p>Ice Cream Taster lets users input or select flavors they'd like to try</p></li>
-                    <li><p>Whenever a user submits a flavor, the app will display the new flavor -- waiting to be devoured</p></li>
-                    <li><p>Each flavor in the waiting area also has a Devour it! button</p></li>
-                    <li><p>When the user devours a flavor, the flavor will move back to the menu selection</p></li>
-                    <li><p>The app stores every flavor in a database, whether devoured or not</p></li>
-                  </ul>
-                  <div class="grid-x grid-padding-x text-center">
+<!-- Main Container -->
+<div class="main-container grid-container" >
+  
+  <!-- About -->
+  <section>
 
-                    <div class="large-6 medium-6 cell">
-                       <a href="#" class="bt-flavors-play button expanded">FLAVORS</a><br/>
-                    </div>
-
-                    <div class="large-6 medium-6 cell">
-                      <a href="#" class="bt-flavors-play button expanded">PLAY</a><br/>
-                    </div>
-
-                  </div>
-              </div>
+    <div id="intro" data-magellan-target="intro" class="content grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="callout introContent" id="intro-content" style="height: 55vh">
+        
+          <h3 class="text-center">Welcome to Ice Cream Taster!</h3>
+          <div class="grid-x grid-padding-x">
+            <!-- Left side photo -->
+            <div class="large-4 medium-4 cell">
+              <img style="margin: 0 auto; display: block;box-shadow: 10px 10px 5px -5px rgba(182,177,184,1);" src="/static-files/assets/images/backgrounds/ice_cream_1.png">   
             </div>
-            
+          <!-- About -->
+            <div class="large-8 cell align-self-middle">
+              <h5 class="intro-text">Ice Cream Taster is data management application that uses MySQL, Node, Express, Handlebars, and a homemade ORM that is deployed through Heroku!</h5> 
+              <h3 class="text-center">How it works: </h3>
+              <ul>
+                <li><p>Ice Cream Taster lets users input or select flavors they'd like to try</p></li>
+                <li><p>Whenever a user submits a flavor, the app will display the new flavor -- waiting to be devoured</p></li>
+                <li><p>Each flavor in the waiting area also has a Devour it! button</p></li>
+                <li><p>When the user devours a flavor, the flavor will move back to the menu selection</p></li>
+                <li><p>The app stores every flavor in a database, whether devoured or not</p></li>
+              </ul>
+              <!-- Buttons -->
+              <div class="grid-x grid-padding-x text-center">
+                <!-- Flavors button -->
+                <div class="large-6 medium-6 cell" data-magellan data-options="animationEasing: linear; animationDuration: 3000">
+                    <a href="#menu" class="bt-flavors-play button expanded"><h5 style="line-height: 1rem; margin: 0;">FLAVORS</h5></a>
+                </div>
+                <!-- Play button -->
+                <div class="large-6 medium-6 cell" data-magellan data-options="animationEasing: linear; animationDuration: 3000;">
+                    <a href="#play" class="bt-flavors-play button expanded"><h5 style="line-height: 1rem; margin: 0;">PLAY</h5></a>
+                </div>
+
+              </div>
+
+            </div>
           </div>
+      
         </div>
       </div>
+    </div>
 
-      <!-- Menu -->
-      <div class="grid-x grid-padding-x" style="margin-top: 10vh; margin-bottom: 10vh">
-        <div class="large-12 cell">
-          <div class="callout text-center" style="height: 74.5vh;">
+  </section><!-- End of Main Container -->
 
-            <h3>Check Out Our Awesome Flavors! </h3>
-              <section class="filter-simple">
-                <div class="button-group">
-                  <button class="button hollow filter-simple-button is-active" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="all">ALL</button>
-                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="classic">CLASSIC</button>
-                  <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="nutty">NUTTY</button>
-                    <button class="button hollow filter-simple-button" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="fruity">FRUITY</button>
-                </div>
+  <!-- Menu -->
+  <section>
+    <div id="menu" data-magellan-target="menu" class="content grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="callout text-center" style="height: 74.5vh;">
+
+          <h3>Check Out Our Awesome Flavors! </h3>
+          <section class="filter-simple">
+            <!-- Filter Buttons -->
+            <div class="button-group">
+              <button class="button hollow filter-simple-button is-active" style="max-width: 10vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="all">ALL</button>
+              <button class="button hollow filter-simple-button" style="max-width: 12vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="classic">CLASSIC</button>
+              <button class="button hollow filter-simple-button" style="max-width: 12vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="nutty">NUTTY</button>
+              <button class="button hollow filter-simple-button" style="max-width: 12vw; width: 100%; border-radius: 0; margin: 1vh; border: 1px solid rgb(15, 158, 163)" data-filter="fruity">FRUITY</button>
+            </div>
 
             <div class="grid-x grid-padding-x row small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh">
-        
+      
               <div class="large-3 medium-3 small-6 cell filter-simple-item classic" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_cookie.png">   
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_cookie.png">   
               </div>
               <div class="large-3 medium-3 small-6 cell filter-simple-item classic" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_mint.png">   
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/classic_mint.png">   
               </div>
-               <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_blueberry.png">   
+              <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_blueberry.png">   
               </div>
-               <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_chocolate_almond.png">   
+              <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_chocolate_almond.png">   
               </div>
-            {{!-- </div>
-
-             <div class="grid-x grid-padding-x row small-up-2 medium-up-3 large-up-4" style="margin-top: 2vh"> --}}
-        
+          
               <div class="large-3 medium-3 small-6 cell filter-simple-item fruity" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_strawberry.png">   
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_strawberry.png">   
               </div>
               <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_hazelnut.png">   
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_hazelnut.png">   
               </div>
-               <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_raspberry_swirls.png">   
+              <div class="large-3 medium-3 small-6  cell filter-simple-item fruity" style="padding-top: 2vh">
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/fruity_raspberry_swirls.png">   
               </div>
               <div class="large-3 medium-3 small-6 cell filter-simple-item nutty" style="padding-top: 2vh">
-                  <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_vanilla_almond.png">   
+                <img class="thumbnail" style="margin: 0 auto; display: block" src="/static-files/assets/images/flavors/nutty_vanilla_almond.png">   
               </div>
-            </div>
-            
 
-            </section>
-            
-          </div>
+            </div>
+          
+          </section>
+          
         </div>
       </div>
+    </div>
+  </section><!-- End of Menu -->
 
-      <!-- Play -->
-      <div class="callout" style="height: 72vh; margin-bottom: 10vh">
-        <div class="grid-x grid-padding-x" style="padding-top: 4vh">
-          
-          <div class="large-8 medium-8 cell">
-            <!-- INSERT IMAGE -->
-            <div class="grid-x grid-padding-x">
-              <div class="large-12 cell">
-                    <img style="margin: 0 auto; display: block;" src="/static-files/assets/images/backgrounds/favorite_flavor_image.png"> 
+  <!-- Play -->
+  <section>
+    <div id="play" data-magellan-target="play" class="content grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="callout" style="height: 72vh; padding: 4vh">
+          <div class="grid-x grid-padding-x">
+        
+            <div class="large-8 medium-8 cell">
+      
+              <div class="grid-x grid-padding-x">
+                <!-- Left side image -->
+                <div class="large-12 cell">
+                  <img style="margin: 0 auto; display: block;" src="/static-files/assets/images/backgrounds/favorite_flavor_image.png"> 
                 </div>
+
+              </div>
+
             </div>
-          </div>
-          <!-- Flavor options -->
-          <div class="large-4 medium-4 cell">
-            {{!-- <form class="create-form"> --}}
+            <!-- Flavor options -->
+            <div class="large-4 medium-4 cell">
               <!-- Selection Menu -->
               <div class="large-12 cell">
-                <h5>Menu</h5>
-                <!--Div to hold burgers that have not been devoured yet-->
+                <!--Div to hold icecream that have not been devoured yet-->
                 <form>
-                  <select>
-                    <option value="" default>Pick a flavor</option>
-                    {{#each burgers}}
-                      {{#if devoured}}
-                        <option>
-                          {{> burgers/burger-block devoured=false}}
-                        </option>
-                      {{/if}}
-                    {{/each}}
-                  </select>
+
+                  <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                    <a class="menu-icon button" type="button" style="color: white" data-toggle></a>
+                  </span>
+                    <div id="responsive-menu">
+                      <ul class="dropdown vertical medium-horizontal menu text-center" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-animate-height="true" style="background-color: rgb(15, 158, 163); margin-bottom: 2vh">
+                        <li>
+                          <a style="color:white; font-weight: 600" href="#menu-flavors"><h5>Menu</h5></a>
+                            <ul style="list-style-type:none;" id="menu-flavors" style="padding: 1vw">
+                              {{#each icecreams}}
+                                {{#if devoured}}
+                                  {{> icecream/flavor-devoured devoured=false}}
+                                {{/if}}
+                              {{/each}}
+                            </ul>
+                          </li>
+                      </ul>
+                    </div>
+
                 </form>
+
               </div>
               <!-- Add a new flavor -->
               <form method="POST" role="form">
-                <fieldset style="border: 1px solid #DDDDDD; padding: 0 1.11111rem; margin-bottom: 2vh">
-                  <legend style="margin-left: -0.16667rem; padding: 0 0.16667rem; color: rgb(15, 158, 163);"><h5>Add a Custom Flavor</h5></legend>
-                    <div class="row" style="display: flex">
+
+                <fieldset style="border: 1px solid #DDDDDD; padding: 0 1.11111rem; margin-bottom: 3vh">
+                  <legend style="margin-left: -0.16667rem; padding: 0 0.16667rem; color: rgb(15, 158, 163); border: none"><h5>Add a Custom Flavor</h5></legend>
+                    <div class="row" style="display: flex; padding-left: 1.2vw">
                       <input type="text" id="flavor" style="color: rgb(231, 53, 163)" placeholder="Add a custom flavor">
                         <div class="small-2 columns">
                           <a style="font-weight: bold; color: rgb(231, 53, 163)" data-toggle="motion-example-2" aria-controls="motion-example-2" class="button clear postfix" id="addFlavor" type="submit">ADD</a>
-                      </div>
+                        </div>
                     </div>
                 </fieldset>
-              </form>
 
-              {{!-- <div class="create-form large-12 cell">
-                <h5>Add a new flavor</h5>
-                  <div class="form-group">
-                   <input id="flavor" type="text" class="form-group-field" name="name" placeholder="Select a menu item or create your flavor!"/>
-                    <button class="form-group-label" data-toggle="motion-example-2" aria-controls="motion-example-2" type="submit">add</button>
-                  </div>
-              </div> --}}
-              {{!-- <form action="">
-                <div class="input-group">
-                  <input class="input-group-field" type="text" placeholder="Add a new flavor">
-                  <div class="input-group-button">
-                    <input type="submit" class="button"data-toggle="motion-example-2" aria-controls="motion-example-2" value="">
-                  </div>
-                </div>
-              </form> --}}
-              <!-- Feed Me -->
+              </form>
+              <!-- Flavors to taste -->
               <div class="large-12 cell">
                 <h5 class="text-center" style="border-top: 1px solid rgb(15, 158, 163); border-bottom: 1px solid rgb(15, 158, 163); color: rgb(15, 158, 163); padding: 1vh; margin-bottom: 2vh;">Flavors to try: </h5>
-                     <ul style="list-style-type:none; margin-left: 0">
-                       {{#each burgers}}
-                          {{#unless devoured}}
-                            {{> burgers/burger-block devoured=true}}
-                          {{/unless}}
-                        {{/each}}
-                     </ul>
-                  
-                </div>
+                  <ul id="flavors-to-taste" style="list-style-type:none; margin-left: 0">
+                    {{#each icecreams}}
+                      {{#unless devoured}}
+                        {{> icecream/flavor-not-devoured devoured=true}}
+                      {{/unless}}
+                    {{/each}}
+                  </ul> 
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
-  
-            
-    </div> <!-- End of main section -->
+    </div>
+  </section>
+        
+</div> <!-- End of main section -->
+
+
+
+
 

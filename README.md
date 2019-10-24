@@ -7,18 +7,21 @@ Ice Cream Taster is data management application that uses MySQL, Node, Express, 
 
 ---
 ### How It Works
-```
+
 * Ice Cream Taster lets users input or select flavors they'd like to try
 * Whenever a user submits a flavor, the app will display the new flavor -- waiting to be devoured
 * Each flavor in the waiting area also has a Devour it! button
 * When the user devours a flavor, the flavor will move back to the menu selection
 * The app stores every flavor in a database, whether devoured or not
-```
+
+---
+
 > [Click Me to Start Sampling the different Flavors!](https://arcane-dusk-00261.herokuapp.com/icecream)
 
-*Technologies*
-```
-> Framework: Zurb Foundation 6 
+---
+### Technologies
+
+> Framework: Zurb Foundation 6
 > Deployed using Heroku  
     * gulp 
     * bower 
@@ -26,7 +29,7 @@ Ice Cream Taster is data management application that uses MySQL, Node, Express, 
     * express-handlebars 
     * express 
     * path
-```
+---
 
 *File Architecture*
 ```

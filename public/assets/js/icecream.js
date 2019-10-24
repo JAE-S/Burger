@@ -24,6 +24,7 @@ $(function() {
       }
     );
   });
+  
   // Change devour state from menu
   $(".change-devour").on('click', function(event) {
     event.preventDefault();

@@ -21,8 +21,8 @@ Ice Cream Taster is data management application that uses MySQL, Node, Express, 
 ---
 ### Technologies
 
-> Framework: Zurb Foundation 6
-> Deployed using Heroku  
+* Framework: Zurb Foundation 6
+* Deployed using Heroku  
     * gulp 
     * bower 
     * mysql
